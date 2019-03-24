@@ -26,4 +26,15 @@ public class PlaneTest {
     public void getWeight(){
         assertEquals(350000, plane.getWeight());
     }
+
+    @Test
+    public void getBaggageAllowance(){
+        assertEquals(40, plane.getBaggageAllowance());
+    }
+
+//    @Test
+//    public void getBaggageAllowancePerPassenger(){
+//        assertEquals(20,plane.getBaggageAllowancePerPassenger());
+//
+//    }
 }

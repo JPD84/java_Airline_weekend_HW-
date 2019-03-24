@@ -7,7 +7,7 @@ public class Flight {
     String departureAirport;
     String departureTime;
     Plane plane;
-    int seats;
+//    NoOfBags noOfBags;
 
 
     public Flight(String flightNo, String departureAirport, String departureTime, Plane plane){
@@ -61,4 +61,8 @@ public class Flight {
         return getSeats() - passengerCount();
 
     }
+
+//    public int getBaggageAllowancePerPassenger() {
+//        return noOfBags() * baggageAllowancePerPassenger();
+//    }
 }

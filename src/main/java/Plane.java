@@ -17,4 +17,8 @@ public class Plane {
         return this.planeType.getWeight();
     }
 
+    public int getBaggageAllowance(){
+        return this.planeType.getBaggageAllowance();
+    }
+
 }
