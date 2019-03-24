@@ -21,4 +21,11 @@ public class Plane {
         return this.planeType.getBaggageAllowance();
     }
 
+    public Integer getPlaneWeight(){
+        return planeType.getWeight();
+    }
+
+    public Integer getPlaneCapacity(){
+        return planeType.getCapacity();
+    }
 }

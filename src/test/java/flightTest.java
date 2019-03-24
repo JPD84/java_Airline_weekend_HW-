@@ -15,7 +15,7 @@ public class flightTest {
     public void setup() {
        passenger = new Passenger("John Denver", 2);
        plane = new Plane(PlaneType.BOEING_747);
-       flight = new Flight("GLA27", "Glasgow", "06:45",plane);
+       flight = new Flight("GLA27", "Glasgow", "Barcelona", "06:45",plane);
 
     }
 
@@ -63,6 +63,11 @@ public class flightTest {
     public void checkHowManySeatsAvailible(){
         flight.checkPassengerIn(passenger);
         assertEquals(1,flight.availibleSeats());
+    }
+
+    @Test
+    public void getDestination(){
+        assertEquals("Barcelona", flight.getDestination());
     }
 
 

@@ -3,16 +3,16 @@ import java.util.ArrayList;
 public class Passenger {
 
 
-    public String name;
-    public int noOfBags;
+    private String name;
+    private Integer bags;
 
-    public Passenger(String name, int noOfBags){
+    public Passenger(String name, int bags){
         this.name = name;
-        this.noOfBags = noOfBags;
+        this.bags = bags;
     }
 
-    public int getNoOfBags() {
-        return noOfBags;
+    public int getBags() {
+        return bags;
     }
 
     public String getName() {

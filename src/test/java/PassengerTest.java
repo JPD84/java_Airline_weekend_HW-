@@ -28,8 +28,8 @@ public class PassengerTest {
     }
 
     @Test
-    public void getNoOfBags() {
-        assertEquals(3, passenger8.getNoOfBags());
+    public void getBags() {
+        assertEquals(3, passenger8.getBags());
     }
 
     @Test

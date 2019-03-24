@@ -32,9 +32,4 @@ public class PlaneTest {
         assertEquals(40, plane.getBaggageAllowance());
     }
 
-//    @Test
-//    public void getBaggageAllowancePerPassenger(){
-//        assertEquals(20,plane.getBaggageAllowancePerPassenger());
-//
-//    }
 }

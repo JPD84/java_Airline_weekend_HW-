@@ -1,27 +1,26 @@
-import java.util.ArrayList;
+public class FlightManager {
 
-public class FlightManager{
+    private Flight flight;
 
-    ArrayList<Passenger> passengers;
-    Plane plane;
-    FlightManager flightManager;
-//    int baggageAllowance;
-//    int baggageAllowancePerPassenger;
-
-
-    public FlightManager(Plane plane, int baggageAllowance, int baggageAllowancePerPassenger){
-        this.passengers = new ArrayList<Passenger>();
-        this.plane = new Plane(PlaneType.BOEING_747);
-//        this.flightManager = new FlightManager(40, 20);
-//        this.baggageAllowancePerPassenger = new BaggageAllowancePerPassenger();
-//        this.baggageAllowance = new BaggageAllowance();
+    public FlightManager(Flight flight) {
+        this.flight = flight;
     }
 
-//    public int getBaggageAllowancePerPassenger(){
-//        return baggageAllowance() - baggageAllowancePerPassenger();
-//
-//
-//    }
+    public int maximumBaggageWeight() {
+        int maxBagWeight = flight.getPlane().getPlaneWeight() / 2;
+        return maxBagWeight;
+    }
 
+    public int maximumBaggageWeightPerPax() {
+        return maximumBaggageWeight() / flight.getPlane().getPlaneCapacity();
+    }
+
+    public int currentBaggageWeight() {
+        return flight.getNumberOfPassengers() * maximumBaggageWeightPerPax();
+    }
+
+    public int remainingBaggageWeight() {
+        return maximumBaggageWeight() - currentBaggageWeight();
+    }
 
 }
